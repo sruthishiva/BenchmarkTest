@@ -1,0 +1,24 @@
+#include <stdio.h>
+#include <stdlib.h>
+#include <math.h>
+#include <time.h>
+int main(int argc, char* argv[])
+{
+clock_t start,end;
+start=clock();
+float a=6.5f;
+int b=3;
+long j;
+double cpu;
+double iterations=999999999;
+for(j=0; j<iterations; j++)
+{
+ float var = a*b+(a/b);
+ }//end of for
+end=clock();
+cpu= ((double) (end - start)) / CLOCKS_PER_SEC;
+printf("\nTime: %f s\n",cpu);
+double GFlops=(iterations)/(double)(cpu)/1000000;
+printf("\nGFlops: %0.2f",GFlops);
+ return 0;
+}
